@@ -8,22 +8,7 @@
     "preinstall": "cd server && npm install",
     "install": "cd client && npm install",
     "postinstall": "npm run build",
-    "build": "cd client && npm run build",
-    "lint": "eslint --resolve-plugins-relative-to . -c .eslintrc.js \"./client/**/*.jsx\" \"./server/**/*.js\" --ignore-pattern \"client/node_modules/\",\"client/build/\", \"server/node_modules/\" --fix"
+    "build": "cd client && npm run build"
   },
-  "license": "ISC",
-  "devDependencies": {
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "prettier": "^2.5.1",
-    "stylelint": "^14.2.0",
-    "stylelint-config-standard": "^24.0.0"
-  },
-  "dependencies": {
-    "@babel/eslint-parser": "^7.16.5",
-    "eslint": "^7.11.0"
-  }
+  "license": "ISC"
 }
