@@ -1,8 +1,10 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const connect = (dbConfig) => {
     try {
-        const {host, username, password, database} = dbConfig;
+        const {
+            host, username, password, database,
+        } = dbConfig;
 
         let absoluteHostName = host;
         if (username) {
@@ -22,11 +24,9 @@ const connect = (dbConfig) => {
     }
 };
 
-const getClient = () => {
-    return mongoose.connection.getClient();
-}
+const getClient = () => mongoose.connection.getClient();
 
 module.exports = {
     connect,
-    getClient
+    getClient,
 };
