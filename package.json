@@ -9,7 +9,7 @@
     "install": "cd client && npm install",
     "postinstall": "npm run build",
     "build": "cd client && npm run build",
-    "lint": "eslint -c .eslintrc.js \"./client/**/*.jsx\" \"./server/**/*.js\" --ignore-pattern \"client/node_modules/\",\"client/build/\", \"server/node_modules/\" --fix"
+    "lint": "eslint --resolve-plugins-relative-to . -c .eslintrc.js \"./client/**/*.jsx\" \"./server/**/*.js\" --ignore-pattern \"client/node_modules/\",\"client/build/\", \"server/node_modules/\" --fix"
   },
   "license": "ISC",
   "devDependencies": {
@@ -23,6 +23,7 @@
     "stylelint-config-standard": "^24.0.0"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.16.5",
     "eslint": "^7.11.0"
   }
 }

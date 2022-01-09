@@ -1,7 +1,9 @@
 module.exports = {
+    parser: '@babel/eslint-parser',
     "env": {
         "browser": true,
-        "es2021": true,
+        commonjs: true,
+        "es6": true,
         "node": true
     },
     "extends": [
@@ -21,12 +23,17 @@ module.exports = {
         "prettier"
     ],
     "rules": {
+        'react/prop-types': ['off'],
+        indent: ['error', 2, { SwitchCase: 1 }],
+        quotes: ['error', 'single'],
+        'no-var': 'error',
+        'one-var': ['error', 'never'],
+        'prefer-arrow-callback': 'error',
         "prettier/prettier": [
             "error",
             {
               "endOfLine": "auto"
             }
-        ],
-        "indent": "off"
+        ]
     }
 };
