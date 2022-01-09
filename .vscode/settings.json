@@ -1,0 +1,7 @@
+{
+    "jshint.enable": false,
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    "eslint.format.enable": true,
+    "eslint.debug": true
+}
