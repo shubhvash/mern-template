@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
+    "start": "ENV=production node app",
+    "dev": "ENV=development nodemon app",
     "lint": "eslint -c .eslintrc.js \"./src/**/*.js\" \"./*.js\" --ignore-pattern node_modules/,build/ --fix"
   },
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.7",
@@ -20,6 +22,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "stylelint": "^14.2.0",
     "stylelint-config-standard": "^24.0.0"

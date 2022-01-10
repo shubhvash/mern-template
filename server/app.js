@@ -7,7 +7,7 @@ const express = require('express');
 const db = require('./db');
 
 /** ** Configuration *** */
-require('dotenv').config({ path: path.resolve(__dirname, '.env.development') });
+require('dotenv').config({ path: path.resolve(__dirname, `.env.${process.env.ENV || 'development'}`) });
 
 const app = express();
 const port = process.env.PORT || 4000;
