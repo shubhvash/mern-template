@@ -7,7 +7,11 @@ This project is a template for building fullstack JavaScript applications runnin
   - Serves the React app 
   - Provides the JSON API for the React app using http
 
-MongoDB is not used in this template but can be easily integrated into the server app. If you want to see an example of how to use MongoDB using Mongoose with this template, have a look in the "mongoose" branch.
+Both FE & BE are in the same repo.
+Separate package.json for FE & BE.
+One root level package.json
+ESLint & Prettier added.
+MongoDB is integrated into the server app.
 
 The app is fully deployable to any PaaS like Heroku or AWS Elastic Beanstalk that understands how to build and run projects with a **package.json** file. 
 
@@ -23,14 +27,12 @@ Use this template to build your own apps. Since the React app is build using Cre
 
 During development of the React app, use **npm run react-dev** or simply navigate to the client folder and run **npm start**. Remember you need the server running as well for it to work.
 
-If you want reload-functionality for the server code, I recommend using something like [nodemon](https://www.npmjs.com/package/nodemon). You can then navigate to the server folder and start it using **nodemon src/index.js**. 
-
-Before deploying, build and start the app, and test that everything works on http://localhost:8080. The react app should open when you visit http://localhost:8080 in the browser and the API should be available on http://localhost:8080/api/.
+Before deploying, build and start the app, and test that everything works on http://localhost:4000. The react app should open when you visit http://localhost:3000 in the browser and the API should be available on http://localhost:4000/api/.
 
 ## Configuration
-The app opens on port 8080 by default. If the environment variable **PORT** is set, that port will be used instead.
+The app opens on port 4000 by default. If the environment variable **PORT** is set, that port will be used instead.
 
-In production mode, the React app expects to find the API on the same port as itself on the `/api` path. In development mode, the React app expects to find the api on http://localhost:8080/api/ instead. You can change this behaviour in the React `.env` files.
+In production mode, the React app expects to find the API on the same port as itself on the `/api` path. In development mode, the React app expects to find the api on http://localhost:3000/api/ instead. You can change this behaviour in the React `.env` files.
 
 ## Server implementation
 It's worth noting that a few tricks are used in the server implementation to concurrently serve the http REST API and the React app.
