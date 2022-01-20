@@ -2,16 +2,16 @@
 
 ## Introduction
 This project is a template for building fullstack JavaScript applications running on node.js. The technology stack is as follows:
+- Both FE & BE are in the same repo.
+- Separate package.json for FE & BE.
+- One root level package.json
+- ESLint & Prettier added.
 - **React** for the front-end, bootstrapped with "Create React App".
 - **express.js** for the server
   - Serves the React app 
   - Provides the JSON API for the React app using http
+- MongoDB is integrated into the server app.
 
-Both FE & BE are in the same repo.
-Separate package.json for FE & BE.
-One root level package.json
-ESLint & Prettier added.
-MongoDB is integrated into the server app.
 
 The app is fully deployable to any PaaS like Heroku or AWS Elastic Beanstalk that understands how to build and run projects with a **package.json** file. 
 
